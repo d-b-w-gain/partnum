@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "partnum"
+version = "0.1.0"
+description = "Part numbers hashed from a part's build inputs, released as git tags"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["PyYAML>=5.4"]
+
+[project.scripts]
+partnum = "partnum.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
